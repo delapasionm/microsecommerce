@@ -1,0 +1,33 @@
+{
+  "name": "microecomzone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:userservice": "npm --workspace userservice run dev",
+    "dev:productservice": "npm --workspace productservice run dev",
+    "dev:orderservice": "npm --workspace orderservice run dev",
+    "swag": "npm-run-all --parallel swag:*",
+    "swag:userservice": "npm --workspace userservice run swag",
+    "swag:productservice": "npm --workspace productservice run swag",
+    "swag:orderservice": "npm --workspace orderservice run swag",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "eslint": "^8.2.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "kafkajs": "^2.2.4"
+  }
+}
