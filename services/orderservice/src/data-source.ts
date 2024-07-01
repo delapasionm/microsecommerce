@@ -59,9 +59,9 @@ export const DataBaseInizialitize = () => {
         // cart.quantity = 1
         // await AppDataSource.manager.save(cart)
 
-        // const order = new Order();
-        // order.userId = 1;
-        // await AppDataSource.manager.save(order)
+        const order = new Order();
+        order.userId = 1;
+        await AppDataSource.manager.save(order)
         // const order2 = new Order();
         // order2.userId = 1;
         // await AppDataSource.manager.save(order2)

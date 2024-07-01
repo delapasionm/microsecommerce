@@ -5,9 +5,17 @@
     "description": "API documentation for EcomZone",
     "version": "1.0.0"
   },
-  "host": "localhost:3006",
+  "host": "localhost:3000",
   "basePath": "/",
   "tags": [
+    {
+      "name": "Auth",
+      "description": "Endpoints related to order operations"
+    },
+    {
+      "name": "Cart",
+      "description": "Endpoints related to order operations"
+    },
     {
       "name": "Order",
       "description": "Endpoints related to order operations"
@@ -15,6 +23,14 @@
     {
       "name": "OrderProduct",
       "description": "Endpoints related to orderProduct operations"
+    },
+    {
+      "name": "Product",
+      "description": "Endpoints related to product operations"
+    },
+    {
+      "name": "User",
+      "description": "Endpoints related to user operations"
     }
   ],
   "schemes": [

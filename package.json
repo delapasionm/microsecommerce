@@ -6,11 +6,13 @@
     "services/*"
   ],
   "scripts": {
-    "dev": "npm-run-all --parallel dev:*",
+    "dev": "nodemon src/index.ts",
+    "dev-services": "npm-run-all --parallel dev:* dev",
     "dev:userservice": "npm --workspace userservice run dev",
     "dev:productservice": "npm --workspace productservice run dev",
     "dev:orderservice": "npm --workspace orderservice run dev",
-    "swag": "npm-run-all --parallel swag:*",
+    "swag": "ts-node src/swagger.ts",
+    "swag-services": "npm-run-all --parallel swag:* swag",
     "swag:userservice": "npm --workspace userservice run swag",
     "swag:productservice": "npm --workspace productservice run swag",
     "swag:orderservice": "npm --workspace orderservice run swag",
@@ -28,6 +30,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "kafkajs": "^2.2.4"
+    "kafkajs": "^2.2.4",
+    "axios": "1.7.2"
   }
 }

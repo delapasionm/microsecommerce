@@ -14,7 +14,8 @@ const orderRepository = AppDataSource.getRepository(Order);
 const orderProductRepository = AppDataSource.getRepository(OrderProduct);
 
 export const findAll = async () => {
-    const orders = await orderRepository.find({relations: ['user']});
+    //{relations: ['user']}
+    const orders = await orderRepository.find();
     return orders;
 };
 
@@ -23,7 +24,7 @@ export const orderfindById = async (orderId: number): Promise<Order | null> => {
 
     const result = await orderRepository.findOne({
         where: {id: orderId},
-        relations: ['user']
+        //relations: ['user']
     });
     return result;
 };

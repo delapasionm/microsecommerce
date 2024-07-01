@@ -17,10 +17,11 @@ app.use(express.json());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.get('/', (req, res) => {
-    res.json({message: 'Hello, world! ProductService'});
+    res.json({message: 'Hello, world! OrderService'});
 });
 
-app.use('/orders', authenticateJWT, orderRoutes);
+app.use('/orders', orderRoutes);
+
 app.use('/order-products', authenticateJWT, orderProductRoutes);
 
 app.listen(PORT, () => {

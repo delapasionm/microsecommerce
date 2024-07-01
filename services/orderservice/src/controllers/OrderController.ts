@@ -5,8 +5,8 @@ import { produceOrderMessage } from '../producers/orderProducer';
 export const findAll = async (req: Request, res: Response, next: NextFunction) => {
     // #swagger.tags = ['Order']
     try {
-        const users = await orderService.findAll();
-        res.json(users);
+        const orders = await orderService.findAll();
+        res.json(orders);
         //logger.info('findAll andata a buon fine');
     } catch (error) {
         //logger.warn('Errore in findAll');
