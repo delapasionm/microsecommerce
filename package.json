@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "workspaces": [
-    "packages/*"
+    "services/*"
   ],
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",

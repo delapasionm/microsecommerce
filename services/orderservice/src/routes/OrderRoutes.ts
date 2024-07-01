@@ -8,8 +8,8 @@ router.get('/', orderController.findAll);
 router.get('/:id', orderController.findById);
 
 router.post('/checkout', orderController.checkoutOrder);
-router.post('/', orderController.createOrder);
 
+router.post('/', orderController.createOrder);
 
 router.delete('/:id', orderController.deleteOrder);
 

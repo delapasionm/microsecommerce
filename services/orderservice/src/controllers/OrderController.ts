@@ -1,6 +1,7 @@
 import {NextFunction, Request, Response} from 'express';
 import * as orderService from '../services/OrderService';
 import { produceOrderMessage } from '../producers/orderProducer';
+
 export const findAll = async (req: Request, res: Response, next: NextFunction) => {
     // #swagger.tags = ['Order']
     try {
