@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.json({message: 'Hello, world! OrderService'});
 });
 
-app.use('/orders', orderRoutes);
+app.use('/orders', authenticateJWT, orderRoutes);
 
 app.use('/order-products', authenticateJWT, orderProductRoutes);
 

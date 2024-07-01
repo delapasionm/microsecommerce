@@ -24,6 +24,6 @@ export const authenticateJWT = async (req: Request, res: Response, next: NextFun
             res.status(401).json({error: 'Token non valido'});
         }
     } else {
-        res.sendStatus(401);
+        res.status(401).json({error: 'Token non valido'});
     }
 };

@@ -1,7 +1,8 @@
 import {AppDataSource, DataBaseInizialitize} from "./data-source"
 import express from 'express';
-import userRoutes from './routes/UserRoutes';
 import authRoutes from "./routes/AuthRoutes";
+import userRoutes from './routes/UserRoutes';
+
 import swaggerUi from 'swagger-ui-express';
 import cors from 'cors';
 import {authenticateJWT} from "./middleware/authMiddleware";
